@@ -1,32 +1,35 @@
+
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <Header></Header>
+    <hr />
+    <div class="container">
+      <Nav></Nav>
+      <hr />
+      <section class="contents">
+        <div>
+          <h3>Members</h3>
+          <p>Contents</p>
+        </div>
+      </section>
+      <hr />
+    </div>
+          <Footer :title=" '카피라이트' "></Footer>
+
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Header from './components/header-component.vue'
+import Nav from './components/nav-component.vue'
+import Footer from './components/footer-component.vue'
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  components:{
+    Header,
+    Nav,
+    Footer
   }
 }
-</style>
+
+</script>
